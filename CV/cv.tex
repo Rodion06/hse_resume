@@ -1,0 +1,279 @@
+%-------------------------
+% Resume in Latex
+% Author : Puneet Gautam, puneet.gautam0206@gmail.com, punitrajgautam@uiit.ac.in
+% License : MIT
+%MIT License
+
+%Copyright (c) 2023 Puneet Gautam
+
+%Permission is hereby granted, free of charge, to any person obtaining a copy
+%of this software and associated documentation files (the "Software"), to deal
+%in the Software without restriction, including without limitation the rights
+%to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+%copies of the Software, and to permit persons to whom the Software is
+%furnished to do so, subject to the following conditions:
+
+%The above copyright notice and this permission notice shall be included in all
+%copies or substantial portions of the Software.
+
+%THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+%IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+%FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+%AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+%LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+%OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+%SOFTWARE.
+%------------------------
+
+%---- Required Packages and Functions ----
+
+\documentclass[a4paper,11pt]{article}
+\usepackage{latexsym}
+\usepackage{xcolor}
+\usepackage{float}
+\usepackage{ragged2e}
+\usepackage[empty]{fullpage}
+\usepackage{wrapfig}
+\usepackage{lipsum}
+\usepackage{tabularx}
+\usepackage{titlesec}
+\usepackage{geometry}
+\usepackage{marvosym}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{cfr-lm}
+\usepackage[T1]{fontenc}
+\setlength{\multicolsep}{0pt} 
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\geometry{left=0.6cm, top=0.5cm, right=0.6cm, bottom=0.5cm}
+% Adjust margins
+%\addtolength{\oddsidemargin}{-0.5in}
+%\addtolength{\evensidemargin}{-0.5in}
+%\addtolength{\textwidth}{1in}
+\usepackage[most]{tcolorbox}
+\tcbset{
+	frame code={}
+	center title,
+	left=0pt,
+	right=0pt,
+	top=0pt,
+	bottom=0pt,
+	colback=gray!20,
+	colframe=white,
+	width=\dimexpr\textwidth\relax,
+	enlarge left by=-2mm,
+	boxsep=4pt,
+	arc=0pt,outer arc=0pt,
+}
+
+\urlstyle{same}
+
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-7pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item{
+    \textbf{#1}{:\hspace{0.5mm}#2 \vspace{-0.5mm}}
+  }
+}
+
+\newcommand{\resumePOR}[3]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1},\hspace{0.3mm}#2 & \textit{\small{#3}} 
+    \end{tabular*}
+    \vspace{-2mm}
+}
+
+\newcommand{\resumeSubheading}[4]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & \textit{\footnotesize{#4}} \\
+        \textit{\footnotesize{#3}} &  \footnotesize{#2}\\
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+
+\newcommand{\resumeProject}[4]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & \textit{\footnotesize{#3}} \\
+        \footnotesize{\textit{#2}} & \footnotesize{#4}
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+% \renewcommand{\labelitemii}{$\circ$}
+\renewcommand{\labelitemi}{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*,labelsep=0mm]}
+\newcommand{\resumeHeadingSkillStart}{\begin{itemize}[leftmargin=*,itemsep=1.7mm, rightmargin=2ex]}
+\newcommand{\resumeItemListStart}{\begin{justify}\begin{itemize}[leftmargin=3ex, rightmargin=2ex, noitemsep,labelsep=1.2mm,itemsep=0mm]\small}
+
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{2mm}}
+\newcommand{\resumeHeadingSkillEnd}{\end{itemize}\vspace{-2mm}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\end{justify}\vspace{-2mm}}
+\newcommand{\cvsection}[1]{%
+\vspace{2mm}
+\begin{tcolorbox}
+    \textbf{\large #1}
+\end{tcolorbox}
+    \vspace{-4mm}
+}
+
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}%
+\newcolumntype{R}{>{\raggedleft\arraybackslash}X}%
+\newcolumntype{C}{>{\centering\arraybackslash}X}%
+%---- End of Packages and Functions ------
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%
+%%%%%% DEFINE ELEMENTS HERE %%%%%%%
+\newcommand{\name}{Rodion Biktimirov} % Your Name
+\newcommand{\course}{Bachelor of Computer Science and Data Analysis} % Your Course
+\newcommand{\phone}{917-266-50-96} % Your Phone Number
+\newcommand{\emaila}{rodionbik@mail.ru} %Email 1
+\newcommand{\emailb}{rrbiktimirov@edu.hse.ru} %Email 2
+\newcommand{\github}{Ra1fY} %Github
+
+
+
+
+\begin{document}
+\fontfamily{cmr}\selectfont
+%----------HEADING-----------------
+\parbox{2.35cm}{%
+
+\includegraphics[width=2cm,clip]{hse_logo.jpg}
+
+}\parbox{\dimexpr\linewidth-2.8cm\relax}{
+\begin{tabularx}{\linewidth}{L r}
+  \textbf{\LARGE \name} & +7-\phone\\
+  
+  \course &  \href{mailto:\emailb}{\emailb}\\
+  {Higher School of Economics University, Moscow} &  \href{https://github.com/\github}{GitHub}
+\end{tabularx}
+}
+
+\vspace{-2mm}
+%-------------SUMMARY-----------------
+\iffalse
+\section{\textbf{Summary}}
+This CV is automatically generated and deployed using the \href{https://github.com/kryptoniteX/autocvmkr}{autoCVmkr} template along with GitHub Actions such that a new version of the CV is compiled, published and ready for use when the cv.tex file is updated.
+\fi
+%-----------EDUCATION-----------------
+\section{\textbf{Education}}
+\setlength{\tabcolsep}{5pt} % Default value: 6pt
+\small{\begin{tabularx}
+{\dimexpr\textwidth-2mm\relax}{|c|C|c|}
+  \hline
+  \textbf{Year} & \textbf{Degree} & \textbf{Institution} \\
+  \hline
+  2025 -- present & BSc, Computer Science and Data Analysis, 1st year & HSE University, Faculty of Computer Science \\
+  \hline
+  2014 -- 2025 & Secondary education, 11 grades & School \ №50, N. Chelny \\
+  \hline
+\end{tabularx}}
+\vspace{-1mm}
+
+%-----------PROJECTS-----------------
+\section{\textbf{Projects}}
+\resumeSubHeadingListStart
+
+    \resumeProject
+      {Real-time Crypto Arbitrage Monitor} % Project Name
+      {Python, WebSockets, asyncio, Redis, FastAPI} % Technologies
+      {} % Event Dates
+      {\href{https://github.com}{\textbf{GitHub}}} % Website
+      \resumeItemListStart
+        \item {Engineered a high-frequency monitoring system that aggregates order book data from multiple exchanges via asynchronous WebSockets}
+        \item {Developed a low-latency engine for identifying cross-platform arbitrage opportunities using vectorized calculations}
+        \item {Leveraged Redis Pub/Sub architecture to ensure decoupling of data ingestion and signal processing modules}
+        \item {Exposed live execution metrics and spread analytics through a high-performance FastAPI interface}
+        \item {Deployed using Docker-based microservices, optimized for high throughput and minimal network latency}
+      \resumeItemListEnd
+    
+    \resumeProject
+      {Weather Data Analytics Suite} %Project Name
+      {Streamlit, Python, Pandas, Scipy} %Technologies
+      {} %Event Dates
+      {\href{https://github.com}{\textbf{GitHub}}} %Website
+      \resumeItemListStart
+        \item {Architected an interactive dashboard for visualizing historical climate trends and real-time atmospheric conditions via OpenWeatherMap API}
+        \item {Applied advanced time-series decomposition to isolate seasonal patterns, rolling averages, and statistical anomalies}
+        \item {Automated trend detection using linear regression models to provide actionable insights into long-term climate shifts}
+        \item {Optimized data pipeline performance by benchmarking parallel processing techniques against synchronous API polling methods}
+      \resumeItemListEnd
+    
+     \vspace{-1mm}
+     
+    \resumeProject
+      {Task Lifecycle REST Service} %Project Name
+      {FastAPI, SQLAlchemy, PostgreSQL, OAuth2} %Technologies
+      {} %Event Dates
+      {\href{https://github.com}{\textbf{GitHub}}} %Website
+      \resumeItemListStart
+        \item {Built a scalable task management backend featuring secure user authentication and authorization using JWT/OAuth2 standards}
+        \item {Designed a robust relational data schema with complex filtering, sorting, and aggregation capabilities for task status tracking}
+        \item {Optimized database interaction performance through SQLAlchemy ORM and efficient query execution strategies}
+        \item {Integrated Swagger/OpenAPI documentation and ensured cross-origin resource sharing (CORS) compatibility for frontend connectivity}
+      \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+\vspace{-7.5mm}
+
+\section{\textbf{Technical Skills}}
+ \resumeHeadingSkillStart
+  \resumeSubItem{Programming Languages}
+    {C++, Python}
+    
+  \resumeSubItem{Frameworks \& Libraries}
+    {FastAPI, Flask, SQLAlchemy, Streamlit}
+    
+  \resumeSubItem{Tools \& Technologies}
+    {Git, Docker, SQLite, YooKassa API, REST APIs, JWT Authentication}
+    
+  \resumeSubItem{Development \& Deployment}
+    {Visual Studio, VS Code, CLion, Linux, Bash, Webhooks, Containerization}
+    
+  \resumeSubItem{Other}
+    {CI/CD (GitHub Actions), LaTeX}
+ 
+ \resumeHeadingSkillEnd
+
+\vspace{-1.5mm}
+
+\section{\textbf{Key Coursework}}
+\resumeHeadingSkillStart
+ \resumeSubItem{Computer Science \& Algorithms} % Category
+    {Advanced Data Structures and Algorithms, C++ High-Performance Programming, Python Software Development}
+ \resumeSubItem{Mathematics \& Theoretical Foundations} % Category
+    {Mathematical Analysis, Linear Algebra and Matrix Theory, Discrete Mathematics and Combinatorics}
+ \resumeSubItem{Systems, Data \& Infrastructure} % Category
+    {Automated Data Collection and Analysis, Software Engineering Toolchain (Git, Bash, Shell Scripting, Docker)}
+\resumeHeadingSkillEnd
+
+\vspace{-1mm}
+%-------------------------------------------
+\vfill
+\center{\footnotesize Last updated: \today}
+
+\end{document}

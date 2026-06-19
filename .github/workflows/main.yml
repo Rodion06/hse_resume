@@ -1,4 +1,4 @@
-name: Build Resume from .tex to .pdf
+name: Build Resume PDF
 
 on:
   push:
@@ -23,8 +23,8 @@ jobs:
       - name: Copy PDF from container
         run: docker cp resume_container:/app/CV/cv.pdf .
 
-      - name: Verify PDF
-        run: test -f cv.pdf"
+      - name: Verify PDF exists
+        run: test -f cv.pdf && echo "succes"
 
       - name: Upload PDF as artifact
         uses: actions/upload-artifact@v4
